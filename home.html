@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>layabox首页</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+  <link rel="stylesheet" type="text/css" href="css/home.css"/>
+    <style>
+        /* css 重置 */
+        *{margin: 0;padding: 0; list-style:none; }
+        /*body{ background:#fff; font:normal 12px/22px 宋体;  }*/
+        img{ border:0;  }
+        a{ text-decoration:none; color:#333;  }
+
+        /* 本例子css */
+        .slideBox{ width:100%; height:230px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+        .slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:49%; bottom:5px; z-index:1; }
+        .slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+        .slideBox .hd ul li{ float:left; margin-right:10px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; border-radius:50%; }
+        .slideBox .hd ul li.on{ background:yellow; color:#fff; }
+        .slideBox .bd{ position:relative; height:100%; z-index:0;   }
+        .slideBox .bd li{ zoom:1; vertical-align:middle; }
+        .slideBox .bd img{ width:100%; height:230px; display:block;  }
+
+        /* 下面是前/后按钮代码，如果不需要删除即可 */
+        .slideBox .prev,
+        .slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url('images/slider-arrow.png') -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
+        .slideBox .next{ left:auto; right:3%; background-position:8px 5px; }
+        .slideBox .prev:hover,
+        .slideBox .next:hover{ filter:alpha(opacity=100);opacity:1;  }
+        .slideBox .prevStop{ display:none;  }
+        .slideBox .nextStop{ display:none;  }
+    </style>
+
+</head>
+
+<body>
+	
+	<!--导航栏开始-->
+	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse ">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand logo" href="#"></a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">首页 </a></li>
+	        <li><a href="family.html">Laya家族</a></li>
+	        <li><a href="game.html">游戏</a></li>
+	        <li><a href="news.html">新闻动态</a></li>
+	        <li><a href="#">开发者中心</a></li>
+	        <li><a href="#">开发者社区</a></li>
+	        <li><a href="#">开放平台</a></li>
+	        <li><a href="ours.html">关于我们</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">中文版</a></li>
+	            <li><a href="#">English</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<!--导航栏结束-->
+	
+	<!--banner开始-->
+	<div class="banner ">
+        <div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul><li>1</li><li>2</li><li>3</li></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li><a><img src="images/game_21.png" /></a></li>
+                    <li><a ><img src="images/game_23.png" /></a></li>
+                    <li><a ><img src="images/game_27.png" /></a></li>
+                </ul>
+            </div>
+
+            <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+            <a class="prev" href="javascript:void(0)"></a>
+            <a class="next" href="javascript:void(0)"></a>
+
+        </div>
+
+	</div>
+	<!--banner结束-->
+	
+	<!--引擎开始-->
+	<div class="engine wow slideInDown">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-md-12 engine-text">
+							<h3>LayaFlash 引擎</h3>
+							<p>让Flash技术变成开发HTML5产品的利器</p>
+						</div>
+						<div class="row engine-list">
+							<div class="col-md-6">
+								<div class="media">
+									<div class="media-left engine-icon">
+								    <a href="#">
+								      <img class="media-object" src="images/pic_14.png" alt="...">
+								    </a>
+								  </div>
+								  <div class="media-body">
+								    <h4 class="media-heading">快速Flash产品转换</h4>
+								    <p>Flash页游\手游仅需1个人7天即可转换为HTML5和APP游戏</p>						    
+								  </div>
+								</div>
+							</div>
+							
+							<div class="col-md-6">
+								<div class="media">
+									<div class="media-left engine-icon" >
+								    <a href="#">
+								      <img class="media-object" src="images/pic_16.png" alt="...">
+								    </a>
+								  </div>
+								  <div class="media-body">
+								    <h4 class="media-heading">快速Flash产品转换</h4>
+								    <p>Flash页游\手游仅需1个人7天即可转换为HTML5和APP游戏</p>						    
+								  </div>
+								</div>
+							</div>
+							
+							<div class="col-md-6">
+								<div class="media">
+									<div class="media-left engine-icon" >
+								    <a href="#">
+								      <img class="media-object" src="images/pic_20.png" alt="...">
+								    </a>
+								  </div>
+								  <div class="media-body">
+								    <h4 class="media-heading">快速Flash产品转换</h4>
+								    <p>Flash页游\手游仅需1个人7天即可转换为HTML5和APP游戏</p>						    
+								  </div>
+								</div>
+							</div>
+							
+							<div class="col-md-6">
+								<div class="media">
+									<div class="media-left engine-icon" >
+								    <a href="#">
+								      <img class="media-object" src="images/pic_21.png" alt="...">
+								    </a>
+								  </div>
+								  <div class="media-body">
+								    <h4 class="media-heading">快速Flash产品转换</h4>
+								    <p>Flash页游\手游仅需1个人7天即可转换为HTML5和APP游戏</p>						    
+								  </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 engine-right">
+					<img src="images/pic_11.png" class="img-responsive"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--引擎结束-->
+
+    <!--优势开始-->
+    <section class="advantage wow bounceInLeft">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 advantage-img">
+                    <img src="images/pic_26.png" class="img-responsive"/>
+                </div>
+                <div class="col-md-7 ">
+                    <div class="row">
+                        <div class="col-md-12 advantage-text">
+                            <h4>Layabox优势</h4>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-12 advantage-list" >
+                                <div class="media">
+                                    <div class="media-left  advantage-icon " >
+                                        <a href="#">
+                                            <img class="media-object" src="images/pic_29.png" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="media-body media-middle">
+                                        <p>快速上手，Flash程序员3小时掌握HTML5开发</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-12 advantage-list" >
+                                <div class="media">
+                                    <div class="media-left  advantage-icon" >
+                                        <a href="#">
+                                            <img class="media-object" src="images/pic_32.png" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="media-body media-middle">
+                                        <p>快速上手，Flash程序员3小时掌握HTML5开发</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 ">
+                            <div class="col-md-12 advantage-list" >
+                                <div class="media">
+                                    <div class="media-left advantage-icon" >
+                                        <a href="#">
+                                            <img class="media-object " src="images/pic_34.png" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="media-body media-middle">
+                                        <p>快速上手，Flash程序员3小时掌握HTML5开发</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 ">
+                            <div class="col-md-12 advantage-list " >
+                                <div class="media">
+                                    <div class="media-left advantage-icon" >
+                                        <a href="#">
+                                            <img class="media-object" src="images/pic_36.png" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="media-body media-middle">
+                                        <p>快速上手，Flash程序员3小时掌握HTML5开发</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--优势结束-->
+
+    <!--产品开始-->
+
+    <section class="product wow bounceInRight">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 product-text text-center">
+                    <p>Laya产品家族</p>
+                </div>
+                <div class="col-md-6 col-xs-12 product-list">
+                    <div class="media">
+                        <div class="media-left product-icon media-middle" >
+                            <a href="#">
+                                <img class="media-object" src="images/pic_40.png" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body ">
+                            <h3>LayaAir</h3>
+                            <p>核心库仅100K左右的新一代HTML5引擎，支
+                                持AS3\TS\JS语言开发，支持2D\3D，非运行
+                                器模式下性能媲美APP。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6  col-xs-12 product-list">
+                    <div class="media">
+                        <div class="media-left product-icon media-middle" >
+                            <a href="#">
+                                <img class="media-object" src="images/pic_43.png" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body ">
+                            <h3>LayaAir</h3>
+                            <p>核心库仅100K左右的新一代HTML5引擎，支
+                                持AS3\TS\JS语言开发，支持2D\3D，非运行
+                                器模式下性能媲美APP。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6  col-xs-12 product-list">
+                    <div class="media">
+                        <div class="media-left product-icon media-middle" >
+                            <a href="#">
+                                <img class="media-object" src="images/pic_50.png" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body ">
+                            <h3>LayaAir</h3>
+                            <p>核心库仅100K左右的新一代HTML5引擎，支
+                                持AS3\TS\JS语言开发，支持2D\3D，非运行
+                                器模式下性能媲美APP。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6  col-xs-12 product-list">
+                    <div class="media">
+                        <div class="media-left product-icon media-middle" >
+                            <a href="#">
+                                <img class="media-object" src="images/pic_48.png" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body ">
+                            <h3>LayaAir</h3>
+                            <p>核心库仅100K左右的新一代HTML5引擎，支
+                                持AS3\TS\JS语言开发，支持2D\3D，非运行
+                                器模式下性能媲美APP。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6  col-xs-12 product-list">
+                    <div class="media">
+                        <div class="media-left product-icon media-middle" >
+                            <a href="#">
+                                <img class="media-object" src="images/pic_54.png" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body ">
+                            <h3>LayaAir</h3>
+                            <p>核心库仅100K左右的新一代HTML5引擎，支
+                                持AS3\TS\JS语言开发，支持2D\3D，非运行
+                                器模式下性能媲美APP。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6  col-xs-12 product-list">
+                    <div class="media ">
+                        <div class="media-left product-icon media-middle" >
+                            <a href="#">
+                                <img class="media-object" src="images/pic_57.png" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body ">
+                            <h3>LayaAir</h3>
+                            <p>核心库仅100K左右的新一代HTML5引擎，支
+                                持AS3\TS\JS语言开发，支持2D\3D，非运行
+                                器模式下性能媲美APP。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--产品结束-->
+
+    <!--游戏开始-->
+
+    <section class="game wow swing">
+        <div class="container">
+            <div class="row">
+                <div class=" game-text">
+                    <p>采用Layabox引擎的精彩游戏<a href="##" class="text-right">更多</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 center-block game-video">
+                    <a href="##">
+                        <img src="images/pic_62.png" alt="" class="img-responsive center-block"/>
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 col-xs-6 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-62 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6 text-center game-list">
+                            <a href="##">
+                                <img src="images/pic_65.png" alt="" class="img-responsive center-block"/>
+                                <p >猎刃2</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--游戏结束-->
+
+    <!--合作伙伴开始-->
+    <section class="partner wow flipInX">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 partner-text">
+                    <h3>合作伙伴<small>(排序不分先后)</small></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12 partner-list">
+                    <a href="##"><img src="images/pic_103.png" alt=""class="img-responsive center-block"/></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--合作伙伴结束-->
+
+    <!--版权开始-->
+    <section class="copyright wow shake">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-4 col-xs-12 col-md-push-8 copyright-icon text-right ">
+                    <button class="btn btn-lg " data-toggle="popover" data-placement="top"></button>
+                    <button class="btn btn-lg " data-toggle="popover" data-placement="top"></button>
+                    <button class="btn btn-lg " data-toggle="popover" data-placement="top"></button>
+                </div>
+                <div class="col-md-8 col-xs-12 col-md-pull-4 copyright-text">
+                    <p>
+                        <a href="##">公司简介</a><a href="##">联系方式</a><a href="##">人才招聘</a>
+                    </p>
+
+                    <p>All Copyright Reserved by Layabox Inc. 京ICP备15008163号-1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--版权结束-->
+	
+  
+</body>
+</html>
+<script type="text/javascript" src="js/wow.js"></script>
+<script type="text/javascript">
+     var w = new WOW();
+     w.init();
+</script>
